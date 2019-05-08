@@ -3,13 +3,13 @@ config=$1
 test_output_path=$2
 
 # For gcore
-apt-get update
-apt-get install gdb
+sudo apt-get update
+sudo apt-get install gdb
 
 dumper() {
   # 1 minute seems to be enough and is less than the timeout
   sleep 60
-  gcore -o ./tests.core $(pidof signalrclienttests)
+  sudo gcore -o ./tests.core $(pidof signalrclienttests)
 }
 
 echo "Running executable"
