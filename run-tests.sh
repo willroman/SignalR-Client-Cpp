@@ -9,7 +9,7 @@ apt-get install gdb
 dumper() {
   # 1 minute seems to be enough and is less than the timeout
   sleep 60
-  gcore -o ./signalrclienttests.core $(pidof signalrclienttests)
+  gcore -o ./tests.core $(pidof signalrclienttests)
 }
 
 echo "Running executable"
